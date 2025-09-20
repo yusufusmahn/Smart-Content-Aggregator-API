@@ -21,3 +21,9 @@
    npm run dev
    ```
    
+   ## API Endpoints
+- **POST /articles** → create new article  
+- **GET /articles?limit=10&offset=0** → list articles (paginated)  
+- **GET /articles/:id** → get article by ID  
+- **POST /users** → create user  
+- **POST /interactions** → record user interaction  
