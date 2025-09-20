@@ -24,6 +24,15 @@ export const getArticles = async (req: Request, res: Response) => {
   }
 };
 
+export const getArticleById = async (req: Request, res: Response) => {
+  try {
+    const article = await Article.findById(req.params.id);
+    if (!article) return res.status(404).json({ error: "Article not found" });
+    res.json(article);
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch article" });
+  }
+};
 
 
 
